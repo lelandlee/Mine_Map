@@ -1,0 +1,43 @@
+</<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mine Map</title>
+
+		<!-- css -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Javascript -->
+		<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+
+		<!-- Mapbox CSS + Javascript -->
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+		
+		<style>
+	    body { margin:0; padding:0; }
+	    .map { position:absolute; top:100; bottom:0; width:100%; }
+  	</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Mine Map</h1>
+		</div>
+
+		<div id='map-one' class='map'> </div>
+
+		<script>
+			//var map = L.mapbox.map('map', 'lelandlee.k8149h3l').setView([40.718217, -73.998284], 13);
+			L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
+			var map = L.mapbox.map('map-one', 'lelandlee.k8149h3l').setView([40.718217, -100.998284], 5);
+
+		</script>
+	</body>
+
+</html>>
