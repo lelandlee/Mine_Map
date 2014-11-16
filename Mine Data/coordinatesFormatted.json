@@ -69660,10 +69660,6 @@
             "CURRENT_OPERATOR_NAME" : "Martin Marietta Materials, Inc."
           },
         "type" : "Feature"
-      },
-      { "geometry" : {  },
-        "properties" : { "CURRENT_MINE_NAME" : "" },
-        "type" : "Feature"
       }
     ],
   "type" : "FeatureCollection"

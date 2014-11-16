@@ -1,0 +1,29 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates" : [ -165.40861100000001,64.541388999999995]
+      },
+      "properties" : { 
+        "CURRENT_CONTROLLER_NAME" : "Nome Gold Company",
+        "CURRENT_MINE_NAME" : "Maine Monroeville",
+        "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates" : [ -120.40861100000001,64.541388999999995]
+      },
+      "properties" : { 
+        "CURRENT_CONTROLLER_NAME" : "Nome Gold Company",
+        "CURRENT_MINE_NAME" : "Maine Monroeville",
+        "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
