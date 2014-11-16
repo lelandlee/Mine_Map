@@ -17,8 +17,34 @@ body {
 #overview img{
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-top: 2%;
-	margin-bottom:2%;
+	margin-top: 1%;
+	margin-bottom:1%;
 	width: 80%;
 	-webkit-filter: blur(2px) drop-shadow(2px 2px 20px black) opacity(0.4);
+}
+
+#map-header {
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 50px;
+	background-color: #95ABC8;
+	text-align: center;
+	color: white;
+}
+
+#map-canvas {
+  height: 98%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 5px solid white;
+}
+
+#footer {
+	padding-top: 20px;
+	height: 100px;
+	background-color: #95ABC8;
+	text-align: center;
+	color: white;
 }
