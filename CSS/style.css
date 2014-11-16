@@ -23,16 +23,20 @@ body {
 	-webkit-filter: blur(2px) drop-shadow(2px 2px 20px black) opacity(0.4);
 }
 
-#map-header {
+.map-header {
 	margin-left: 5%;
 	margin-right: 5%;
 	height: 50px;
 	background-color: #95ABC8;
 	text-align: center;
 	color: white;
+	font-size: 20px;
+}
+a:link, a:visited{
+	color: white;
 }
 
-#map-canvas1, #map-canvas2 {
+#map-canvas1, #map-canvas2, #map-canvas3 {
   height: 98%;
   margin-top: 1%;
   margin-bottom: 1%;

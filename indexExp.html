@@ -5,17 +5,6 @@
 		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 		<title>Mine Map</title>
 
-		<!-- css -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="CSS/style.css">
-
-		<!-- Javascript -->
-		<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-
-		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-
 		<!-- MapBox Related -->
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
@@ -31,14 +20,6 @@
   </head>
 
   <body>
-  	<div id="header">
-  		<h1>Mine Map</h1>
-  		<h2>Reavealing the Reality of Mines in the US</h2>
-  	</div>
-  	<div id="overview">
-  		<img src="images/2100SM_Airport_Tunnel_001.jpg" alt="Image of Mining Operation">
-  	</div>
-
     <div id='map'></div>
 		<script>
 		L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
@@ -46,7 +27,7 @@
 		    .setView([38.1089, -98], 4);
 
 		var featureLayer = L.mapbox.featureLayer()
-		    .loadURL('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.geojson')
+		    .loadURL('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/sampleGeoJSON.geojson')
 		    .addTo(map);
 		</script>
 

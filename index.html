@@ -16,33 +16,40 @@
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBlLW4BHoiF0oVjao_4jBQ8LRF8NPZ_xmM"></script>
+
     <script>
-			var map;
+			var map1;
 			function initialize() {
 			  // Create a simple map.
-			  map = new google.maps.Map(document.getElementById('map-canvas1'), {
+			  map1 = new google.maps.Map(document.getElementById('map-canvas1'), {
 			    zoom: 5,
 			    center: {lat: 39.5, lng: -98.35}
 			  });
-
-			  // Load a GeoJSON from the same server as our demo.
-			  map.data.loadGeoJson('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.geojson');
+			  map1.data.loadGeoJson('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.geojson');
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
-
 	  </script>
 	  <script>
 			var map2;
 			function initialize() {
-			  // Create a simple map.
 			  map2 = new google.maps.Map(document.getElementById('map-canvas2'), {
 			    zoom: 5,
 			    center: {lat: 39.5, lng: -98.35}
 			  });
-
-			  // Load a GeoJSON from the same server as our demo.
 			  map2.data.loadGeoJson('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/violations.geojson');
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+	  </script>
+	  <script>
+			var map3;
+			function initialize() {
+			  map3 = new google.maps.Map(document.getElementById('map-canvas3'), {
+			    zoom: 5,
+			    center: {lat: 39.5, lng: -98.35}
+			  });
+			  map3.data.loadGeoJson('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/sampleGeoJSON.geojson');
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -57,11 +64,20 @@
   	<div id="overview">
   		<img src="images/2100SM_Airport_Tunnel_001.jpg" alt="Image of Mining Operation">
   	</div>
-  	<div id="map-header">
-  		<h2>Overview of Mines in US</h2>
+
+  	<div class="map-header">
+  		<a href="https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.geojson">Overview of Active Mines in US</a>
   	</div>
     <div id="map-canvas1"></div>
+    <div class="map-header">
+    	<a href="https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Datations.geojsoa/violn">Overview of Mines with Violations</a>
+  	</div>
     <div id="map-canvas2"></div>
+    <div class="map-header">
+    	<a href="https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/sampleGeoJSON.geojson">Mines To Investigate</a>
+  	</div>
+  	<div id="map-canvas3"></div>
+
     <div id="footer">
     	<p>@ Bayes Hack 2014</p>
     </div>
