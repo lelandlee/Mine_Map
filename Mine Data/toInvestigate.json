@@ -83,6 +83,30 @@
         "CURRENT_MINE_NAME" : "Maine Monroeville",
         "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates" : [ -74,40.7]
+      },
+      "properties" : { 
+        "CURRENT_CONTROLLER_NAME" : "Progress Superior",
+        "CURRENT_MINE_NAME" : "Maine Monroeville",
+        "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates" : [ -80.5,39]
+      },
+      "properties" : { 
+        "CURRENT_CONTROLLER_NAME" : "Progress Superior",
+        "CURRENT_MINE_NAME" : "Maine Monroeville",
+        "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
+      }
     }
   ],
   "type": "FeatureCollection"
