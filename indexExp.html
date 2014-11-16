@@ -1,19 +1,45 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset=utf-8 />
-		<title>Load GeoJSON from a URL</title>
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<title>Mine Map</title>
+
+		<!-- css -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
+
+		<!-- Javascript -->
+		<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
+		<!-- MapBox Related -->
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
 		<style>
-		  body { margin:0; padding:0; }
-		  #map { position:absolute; top:0; bottom:0; width:100%; }
+		  #map { 
+		  	position:absolute; 
+		  	/*padding-top: 100px; */
+		  	margin-left: 5%;
+		  	margin-right: 5%;
+		  	width:90%; 
+		  }
 		</style>
-	</head>
-	<body>
-		<div id='map'></div>
+  </head>
 
+  <body>
+  	<div id="header">
+  		<h1>Mine Map</h1>
+  		<h2>Reavealing the Reality of Mines in the US</h2>
+  	</div>
+  	<div id="overview">
+  		<img src="images/2100SM_Airport_Tunnel_001.jpg" alt="Image of Mining Operation">
+  	</div>
+
+    <div id='map'></div>
 		<script>
 		L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
 		var map = L.mapbox.map('map', 'lelandlee.k8149h3l')
@@ -23,5 +49,6 @@
 		    .loadURL('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.geojson')
 		    .addTo(map);
 		</script>
-	</body>
+
+  </body>
 </html>
