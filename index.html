@@ -1,43 +1,34 @@
-</<!DOCTYPE html>
-<html lang="eng">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Mine Map</title>
-
-		<!-- css -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-
-		<!-- Javascript -->
-		<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-
-		<!-- Mapbox CSS + Javascript -->
-		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-		
-		<style>
-	    body { margin:0; padding:0; }
-	    .map { position:absolute; top:100; bottom:0; width:100%; }
-  	</style>
-
-	</head>
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Loading markers from CSV</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<script src='leaflet-omnivore.min.js'></script>
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
 	<body>
-		<div class="header">
-			<h1>Mine Map</h1>
-		</div>
 
-		<div id='map-one' class='map'> </div>
+		<div id='map'></div>
 
 		<script>
-			//var map = L.mapbox.map('map', 'lelandlee.k8149h3l').setView([40.718217, -73.998284], 13);
-			L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
-			var map = L.mapbox.map('map-one', 'lelandlee.k8149h3l').setView([40.718217, -100.998284], 5);
+		L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
+		var map = L.mapbox.map('map', 'examples.map-i86nkdio')
+		    .setView([38, -95], 4);
 
+		// Omnivore will AJAX-request this file behind the scenes and parse it:
+		// note that there are considerations:
+		// - The CSV file must contain latitude and longitude values, in column
+		//   named roughly latitude and longitude
+		// - The file must either be on the same domain as the page that requests it,
+		//   or both the server it is requested from and the user's browser must
+		//   support CORS.
+		omnivore.csv('Mines_New.csv').addTo(map);
 		</script>
 	</body>
-
-</html>>
+</html>
