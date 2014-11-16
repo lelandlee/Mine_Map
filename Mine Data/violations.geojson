@@ -69117,10 +69117,6 @@
             "TotalExemptions" : "1083.2"
           },
         "type" : "Feature"
-      },
-      { "geometry" : {  },
-        "properties" : { "MineID" : "" },
-        "type" : "Feature"
       }
     ],
   "type" : "FeatureCollection"
