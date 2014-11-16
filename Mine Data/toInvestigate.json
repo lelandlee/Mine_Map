@@ -4,10 +4,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates" : [ -165.40861100000001,64.541388999999995]
+        "coordinates" : [ -95,32.99]
       },
       "properties" : { 
-        "CURRENT_CONTROLLER_NAME" : "Nome Gold Company",
+        "CURRENT_CONTROLLER_NAME" : "Leesburg Strip",
         "CURRENT_MINE_NAME" : "Maine Monroeville",
         "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
       }
@@ -16,10 +16,22 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates" : [ -120.40861100000001,64.541388999999995]
+        "coordinates" : [ -80.7,37.9]
       },
       "properties" : { 
-        "CURRENT_CONTROLLER_NAME" : "Nome Gold Company",
+        "CURRENT_CONTROLLER_NAME" : "Cove Mountain",
+        "CURRENT_MINE_NAME" : "Maine Monroeville",
+        "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates" : [ -80.86,38.49]
+      },
+      "properties" : { 
+        "CURRENT_CONTROLLER_NAME" : "Progress Superior",
         "CURRENT_MINE_NAME" : "Maine Monroeville",
         "CURRENT_OPERATOR_NAME" : "Nome Gold Alaska Corporation"
       }
