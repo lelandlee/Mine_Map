@@ -32,7 +32,7 @@ body {
 	color: white;
 }
 
-#map-canvas {
+#map-canvas1, #map-canvas2 {
   height: 98%;
   margin-top: 1%;
   margin-bottom: 1%;
