@@ -85,13 +85,13 @@ class ModelCreator(object):
             data=training_data,
             target_names=self.label_human_desc,
             target=training_labels,
-            DESCR="Linqia blog post classification training dataset")
+            DESCR="Training dataset")
 
         self.test_data = Bunch(
              data=test_data,
              target_names=self.label_human_desc,
              target=test_labels,
-             DESCR="Linqia blog post classification test dataset")
+             DESCR="Cross Validation dataset")
 
     def learn(self):
         self.log.info("Creating the model")
