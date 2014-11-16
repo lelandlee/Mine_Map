@@ -1,3 +1,25 @@
-.header {
-	height: 100px;
+body {
+	background-color: #75787B;
+}
+
+#header {
+	height: 260px;
+	color: white;
+	background-color: #53565A;
+	background-image: url('images/2100SM_Airport_Tunnel_001.jpg');
+	text-align: center;
+}
+
+#header h1 {
+	font-size: 180px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#overview img{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+	margin-bottom:2%;
+	width: 80%;
+	-webkit-filter: blur(2px) drop-shadow(2px 2px 20px black) opacity(0.4);
 }

@@ -1,34 +1,54 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset=utf-8 />
-<title>Loading markers from CSV</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-<script src='leaflet-omnivore.min.js'></script>
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-</head>
-	<body>
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mine Map</title>
 
-		<div id='map'></div>
+		<!-- css -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
 
-		<script>
-		L.mapbox.accessToken = 'pk.eyJ1IjoibGVsYW5kbGVlIiwiYSI6IlF6YXRwcUUifQ.lOwg0AiYU4PwgX4bFgZvAw';
-		var map = L.mapbox.map('map', 'examples.map-i86nkdio')
-		    .setView([38, -95], 4);
+		<!-- Javascript -->
+		<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
 
-		// Omnivore will AJAX-request this file behind the scenes and parse it:
-		// note that there are considerations:
-		// - The CSV file must contain latitude and longitude values, in column
-		//   named roughly latitude and longitude
-		// - The file must either be on the same domain as the page that requests it,
-		//   or both the server it is requested from and the user's browser must
-		//   support CORS.
-		omnivore.csv('Mines_New.csv').addTo(map);
-		</script>
-	</body>
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    
+    <script>
+			var map;
+			function initialize() {
+			  // Create a simple map.
+			  map = new google.maps.Map(document.getElementById('map-canvas'), {
+			    zoom: 4,
+			    center: {lat: 39.5, lng: -98.35}
+			  });
+
+			  // Load a GeoJSON from the same server as our demo.
+			  map.data.loadGeoJson('https://raw.githubusercontent.com/lelandlee/Mine_Map/master/Mine%20Data/coordinatesFormatted.json');
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+  	<div id="header">
+  		<h1>Mine Map</h1>
+  		<h2>Reavealing the Reality of Mines in the US</h2>
+  	</div>
+  	<div id="overview">
+  		<img src="images/2100SM_Airport_Tunnel_001.jpg" alt="Image of Mining Operation">
+  	</div>
+    <div id="map-canvas"></div>
+  </body>
 </html>
