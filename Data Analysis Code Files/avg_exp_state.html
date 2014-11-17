@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8" title="kapil">
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+var width = 960,
+    height = 1160;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("realExceptio_state.json", function(error, uk) {
+  if (error) return console.error(error);
+  console.log(uk);
+//Define map projection
+var projection = d3.geo.albersUsa()
+					   .translate([width/2, height/2])
+					   .scale([1200]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var color = d3.scale.quantize()
+    .range(["rgb(237,248,233)","rgb(186,228,179)","rgb(116,196,118)","rgb(49,163,84)","rgb(0,109,44)"]);
+
+var avgList = [];
+for (var i = 0; i < uk.features.length; i++) {
+	if(isNaN(uk.features[i].avg_exp )) {
+		continue;
+	}
+	avgList.push(uk.features[i].avg_exp);
+}	
+
+//Set input domain for color scale
+// color.domain([
+//     d3.min(uk, function(d) { return
+// 		6000; }),
+//     d3.max(uk, function(d) { return 14000; })
+
+		color.domain([Math.min.apply(Math,avgList), Math.max.apply(Math,avgList)]);
+
+svg.selectAll("path")
+   .data(uk.features)
+   .enter()
+   .append("path")
+   .attr("d", path)
+   .style("fill", function(d) {
+   		//Get data value
+   		var value = d.avg_exp;
+   		// console.error(value);
+   		if (value) {
+	   		return color(value);
+   		} else {
+   			//If value is undefined…
+	   		return "#ccc";
+   		}
+   });
+
+});
+</script>
